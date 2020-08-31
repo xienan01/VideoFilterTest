@@ -4,9 +4,6 @@ QT += concurrent
 CONFIG += c++11
 CONFIG -= app_bundle
 
-QMAKE_INFO_PLIST = Info.plist
-
-
 # The following define makes your compiler emit warnings if you use
 # any Qt feature that has been marked deprecated (the exact warnings
 # depend on your compiler). Please consult the documentation of the
@@ -20,8 +17,11 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 
-INCLUDEPATH +=D:/Work/ScreenRecoder/include/ffmpeg/
-LIBS += -LD:/Work/ScreenRecoder/build_x64/lib
+#INCLUDEPATH +=D:/Work/ScreenRecoder/include/ffmpeg/
+#LIBS += -LD:/Work/ScreenRecoder/build_x64/lib
+
+INCLUDEPATH +=/Users/xienan/Work/im-ui/include/ffmpeg/
+LIBS += -L/Users/xienan/Work/im-ui/Dll/darwin/release/
 
 LIBS += \
     -lswscale \
@@ -35,8 +35,6 @@ LIBS += \
 SOURCES += \
         decodeunit.cpp \
         main.cpp \
-        #audiosampleTest.cpp \
-        #muxing.c
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

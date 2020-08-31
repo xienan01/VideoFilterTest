@@ -1,4 +1,4 @@
-﻿///音频采集重采样
+﻿///视频filter
 
 #include <QDebug>
 
